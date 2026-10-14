@@ -36,7 +36,7 @@
         <tr><td>OAuth access/refresh token</td><td>To act for you after you sign in</td><td>Yes, in <code>token.json</code> on your computer, until you revoke access</td></tr>
         <tr><td>Your channel's name and ID</td><td>To show which channel an upload goes to before you confirm</td><td>No, read when needed</td></tr>
         <tr><td>ID, upload time and visibility of videos uploaded through Channel Studio</td><td>To avoid uploading the same video twice, and to link to it</td><td>Yes, on your computer. Re-checked with YouTube at least every 30 days, and removed if the video no longer exists</td></tr>
-        <tr><td>Your channel's list of uploads, with public view, like and comment counts</td><td>Shown to you so you can see what works</td><td><strong>No.</strong> Shown during that run only, never saved</td></tr>
+        <tr><td>Your channel's list of uploads, with public view, like and comment counts</td><td>Shown to you, or read by your AI assistant (below), so you can see what works</td><td><strong>No.</strong> Used during that run only, never saved</td></tr>
       </tbody>
     </table>
   </div>
@@ -45,7 +45,8 @@
   <h2>How information is used, processed and shared</h2>
   <ul>
     <li>Everything is stored <strong>only on your own computer</strong>. Channel Studio has no server and no database, and it sends nothing to anyone except Google/YouTube (over HTTPS) to carry out the actions you approve.</li>
-    <li>Channel Studio is run with the help of an <strong>AI assistant (Anthropic's Claude)</strong> working on the same computer for the developer. To plan new videos, the assistant may read video titles and topics, and the view, like and comment counts shown by the statistics command. It <strong>never</strong> has access to your login token and <strong>cannot upload</strong> anything. Anthropic's privacy policy: <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>.</li>
+    <li><strong>AI assistant.</strong> Channel Studio is operated together with an <strong>AI assistant (Anthropic's Claude)</strong>, which runs on the developer's computer as the developer's agent. It creates the videos and their titles, descriptions and tags. It may also <strong>use Channel Studio's saved sign-in on the developer's behalf for read-only actions</strong>: listing the channel's videos, reading their view, like and comment counts, and re-checking that stored records are still current. Information the assistant reads this way is processed by Anthropic to provide the assistant. Anthropic's privacy policy: <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>.</li>
+    <li><strong>What the AI assistant cannot do:</strong> it can't sign in or grant access (only the developer can, in person), and it <strong>can't upload, change or delete anything on YouTube</strong>. Every upload is started and confirmed by the developer, video by video.</li>
     <li>Data is not sold, not shared with advertisers, and not used for any other purpose.</li>
     <li>Every upload happens only after you review the exact title, description, tags, audience setting, visibility and destination channel, and type a confirmation.</li>
   </ul>
