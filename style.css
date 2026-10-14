@@ -1,0 +1,57 @@
+/* Brightvane Studio site: one readable column, styled like a well-kept handbook. */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --fg: #1d2433;
+  --muted: #5a6475;
+  --line: #dde1e8;
+  --accent: #2c4a7a;
+  --accent-soft: #e6ecf6;
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-body: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  --font-mono: Consolas, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #11151d; --surface: #181e29; --fg: #e4e8ef; --muted: #9aa4b5;
+    --line: #2a3242; --accent: #8fb0e6; --accent-soft: #1f2a3d; color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.65; }
+.wrap { max-width: 760px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 64px; }
+
+nav.site { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+nav.site .brand { font-family: var(--font-display); font-weight: 700; font-size: 20px; color: var(--fg); text-decoration: none; margin-right: auto; }
+nav.site a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 15px; }
+nav.site a[aria-current="page"] { color: var(--fg); text-decoration: underline; text-underline-offset: 4px; }
+
+header.page { padding-block: 28px 8px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0; }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(30px, 5vw, 40px); line-height: 1.15; margin: 6px 0 0; text-wrap: balance; }
+.updated { font-size: 13px; color: var(--muted); margin: 8px 0 0; }
+.lede { color: var(--muted); max-width: 62ch; }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: 22px; margin: 32px 0 8px; }
+p, li { max-width: 68ch; }
+ul, ol { padding-left: 1.3em; display: grid; gap: 6px; }
+a { color: var(--accent); text-underline-offset: 2px; }
+code { font-family: var(--font-mono); font-size: .88em; background: var(--accent-soft); padding: 1px 6px; border-radius: 4px; overflow-wrap: anywhere; }
+
+.table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); margin: 12px 0; }
+table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14.5px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+th { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+tr:last-child td { border-bottom: 0; }
+
+.note { border-left: 3px solid var(--accent); background: var(--accent-soft); padding: 12px 16px; border-radius: 0 6px 6px 0; margin: 16px 0; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+.links { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 12px; }
+.links a.card { text-decoration: none; color: var(--fg); display: grid; gap: 2px; }
+.links a.card strong { color: var(--accent); }
+.links a.card span { color: var(--muted); font-size: 14px; }
+.email { font-family: var(--font-mono); user-select: all; overflow-wrap: anywhere; }
+
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
